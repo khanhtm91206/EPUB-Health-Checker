@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="EPUB Health Checker: check EPUB archive integrity, readability, and validation on Windows." />
+  <title>EPUB Health Checker — Windows EPUB Validation Tool</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0a1020;--panel:#141e32;--line:#293750;--text:#edf4ff;--muted:#9eacc6;--accent:#7e9aff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:radial-gradient(ellipse at 80% 0%,#172957 0%,var(--bg) 48%);color:var(--text);line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{max-width:1040px;margin:auto;padding:0 24px}header{border-bottom:1px solid #ffffff18}nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}.brand{font-weight:800;letter-spacing:.2px}.navlinks{display:flex;gap:22px;color:var(--muted);font-size:.95rem}.navlinks a:hover{color:#fff}
+    .hero{padding:105px 0 95px;text-align:center}.tag{display:inline-block;border:1px solid #4a629a;border-radius:99px;padding:5px 14px;color:#bed0ff;font-size:.85rem;background:#192849}h1{font-size:clamp(2.3rem,6vw,4.5rem);line-height:1.13;letter-spacing:-.05em;margin:22px 0}h1 span{color:#9eb2ff}.lead{max-width:700px;margin:0 auto 30px;color:var(--muted);font-size:1.13rem}.actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}.btn{display:inline-block;padding:13px 22px;border-radius:11px;font-weight:700;border:1px solid #53688e;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.primary{background:#8099ff;border-color:#8099ff;color:#071126}.secondary{background:#17233b}.small{font-size:.87rem;color:var(--muted);margin-top:18px}
+    section{padding:44px 0}h2{font-size:2rem;letter-spacing:-.03em;margin:0 0 10px}.sub{color:var(--muted);margin:0 0 28px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(160deg,#17233c,#111a2d);border:1px solid var(--line);border-radius:16px;padding:26px}.symbol{font-size:1.7rem}.card h3{margin:13px 0 8px}.card p{color:var(--muted);margin:0}.steps{counter-reset:step;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}.step:before{counter-increment:step;content:counter(step);display:grid;place-items:center;width:32px;height:32px;border-radius:9px;background:#283e72;color:#c9d6ff;font-weight:800;margin-bottom:14px}.step strong{display:block;margin-bottom:7px}.step p{color:var(--muted);margin:0}.download{background:#17233a;border:1px solid #394d75;border-radius:20px;padding:36px;text-align:center;margin:24px 0 60px}.download p{color:var(--muted)}footer{border-top:1px solid #ffffff1b;padding:25px 0;color:var(--muted);font-size:.9rem}footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    @media(max-width:720px){.navlinks{gap:12px;font-size:.83rem}.hero{padding:70px 0}.grid,.steps{grid-template-columns:1fr}.download{padding:26px 18px}}
+  </style>
+</head>
+<body>
+<header><div class="wrap"><nav><a class="brand" href="#top">📚 EPUB Health Checker</a><div class="navlinks"><a href="#features">Features</a><a href="#how">How to use</a><a id="navGitHub" href="#">GitHub</a></div></nav></div></header>
+<main id="top">
+  <div class="wrap"><div class="hero"><span class="tag">Windows Desktop App · v1.0.0</span><h1>Check your EPUB files.<br><span>Find problems early.</span></h1><p class="lead">Scan EPUB archives for ZIP/CRC corruption, quickly assess readability, or run detailed validation — all from a simple Windows desktop interface.</p><div class="actions"><a class="btn primary" id="downloadHero" href="#download">⬇ Download for Windows</a><a class="btn secondary" id="sourceHero" href="#">View source on GitHub</a></div><p class="small">Free to use · No Python installation required · Windows</p></div></div>
+  <section id="features"><div class="wrap"><h2>Three scan modes</h2><p class="sub">Choose the level of checking that fits your needs.</p><div class="grid"><article class="card"><div class="symbol">🛡️</div><h3>ZIP Integrity</h3><p>Read and verify ZIP entries, including CRC errors, to detect damaged EPUB archives.</p></article><article class="card"><div class="symbol">⚡</div><h3>Fast Readability</h3><p>Sample EPUB content for a quicker assessment. Issues outside the sample may be missed.</p></article><article class="card"><div class="symbol">🔎</div><h3>Full Validation</h3><p>Perform deeper EPUB checks using the available validators.</p></article></div></div></section>
+  <section id="how"><div class="wrap"><h2>Get started in minutes</h2><p class="sub">No installer or Python environment needed.</p><div class="steps"><div class="step"><strong>Download</strong><p>Get the Windows ZIP package from the latest GitHub Release.</p></div><div class="step"><strong>Extract and run</strong><p>Unzip the entire folder, then double-click EPUB_Health_Checker.exe. Keep the _internal folder alongside it.</p></div><div class="step"><strong>Scan EPUBs</strong><p>Choose files or a folder, select a scan mode, and export lists of problematic files if needed.</p></div></div></div></section>
+  <div class="wrap"><div class="download" id="download"><h2>Ready to check your library?</h2><p>Download the latest Windows release and start scanning your EPUB collection.</p><a class="btn primary" id="downloadBottom" href="#">⬇ Download latest release</a><p class="small">Download the ZIP asset under Releases, not the GitHub-generated “Source code” archive.</p></div></div>
+</main>
+<footer><div class="wrap"><span>© <span id="year"></span> EPUB Health Checker</span><span><a id="footerGitHub" href="#">Source code & releases on GitHub</a></span></div></footer>
+<script>
+  // CHANGE THIS to your actual GitHub username and repository name.
+  const GITHUB_USERNAME = 'khanhtm91206';
+  const REPOSITORY = 'EPUB-Health-Checker';
+  const repoURL = `https://github.com/${GITHUB_USERNAME}/${REPOSITORY}`;
+  const releaseURL = `${repoURL}/releases/latest`;
+  ['navGitHub','sourceHero','footerGitHub'].forEach(id => document.getElementById(id).href = repoURL);
+  ['downloadHero','downloadBottom'].forEach(id => document.getElementById(id).href = releaseURL);
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
